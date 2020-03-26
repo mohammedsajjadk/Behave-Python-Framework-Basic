@@ -18,3 +18,9 @@ def step_impl(context):
 def step_impl(context):
     page = CookiesPage(context.driver)
     assert page.cookie_text.is_displayed()
+
+
+@then('the User can see (.*) navigation links')
+def step_impl(context, expected_number_of_links):
+    page = CookiesPage(context.driver)
+    assert len(page.total_links()) == int(expected_number_of_links)
