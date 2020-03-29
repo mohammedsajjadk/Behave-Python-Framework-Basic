@@ -52,5 +52,3 @@ C:.
 <li>Script path - Should be the folder where Behave.exe exists
 <li>Parameters - Folder where you have your feature files
 <li>Working Directory - Should be the folder where Behave.exe exists
-
-<h2>Quick Explanation About The Framework</h2>
