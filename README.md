@@ -1,22 +1,37 @@
 <h2> Folder Structure</h2>
 
 ```
+
+C:.
+├───.idea
+│   └───inspectionProfiles
 ├───drivers
 └───tests
     ├───acceptance
-    │   ├───locators                 # Locators are stored here (mostly as tuple)
+    │   ├───common
+    │   │   └───locators_Config.py          # 4. We can also store locators in this file in dictionary
+    │   │   └───url_config.py               # 5. We will store urls in this file in dictionary
+    │   ├───features                        # 1. We will write the scenarios here
+    │   │   └───facebook.feature
+    │   │   └───facebook_help.feature
+    │   ├───locators                        # 4. Locators are stored here (mostly as tuple). We can also store in locators_config.py but this is preferrable
     │   │   └───base_page.py
     │   │   └───cookies_page.py
+    │   │   └───help_page.py
     │   │   └───home_page.py
-    │   ├───page_model               # we will have the methods here which use the locators and return specific step (example., one method will return URL, one method will return the driver.find_element(email) etc.,
+    │   ├───page_model                      # 3. we will write the methods here which use the locators and return specific step (example., one method will return URL, one method will return the driver.find_element(email)) etc.,
     │   │   └───base_page.py
     │   │   └───cookies_page.py
+    │   │   └───help_page.py
     │   │   └───home_page.py
-    │   ├───steps                    # step definitions - we write the step definitions in this package. We will use the methods defined in "page_models"
+    │   ├───steps                            # 2. step definitions - we write the step definitions in this package. We will use the methods defined in "page_models"
     │   │   └───cookiePage.py
+    │   │   └───helpPage.py
     │   │   └───homePage.py
     │   │   └───navigation.py
-    └───facebook.feature             # feature file
+    └───environment.py
+    └───setup.py
+
 ```
 <br><br>
 
@@ -37,3 +52,5 @@
 <li>Script path - Should be the folder where Behave.exe exists
 <li>Parameters - Folder where you have your feature files
 <li>Working Directory - Should be the folder where Behave.exe exists
+
+<h2>Quick Explanation About The Framework</h2>

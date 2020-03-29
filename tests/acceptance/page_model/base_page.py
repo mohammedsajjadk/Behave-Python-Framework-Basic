@@ -1,3 +1,4 @@
+from common.url_config import *
 from tests.acceptance.locators.base_page import BasePageLocators
 
 
@@ -7,7 +8,7 @@ class BasePage:
 
     @property
     def url(self):
-        return 'https://www.facebook.com'  # notice no '/' at the end
+        return URLConfig.get('baseURL')
 
     @property
     def email(self):
